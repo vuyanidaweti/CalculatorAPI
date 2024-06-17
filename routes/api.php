@@ -16,13 +16,14 @@ Route::controller(\App\Http\Controllers\IncomeController::class)->group(function
     Route::delete('/incomes/{id}','destroy');
 });
 
-Route::controller(\App\Http\Controllers\IncomeTypesController::class)->group(function()
-{
-    Route::get('/incometypes','index');
-    Route::post('/incometypes','store');
-    Route::get('incometypes/{id}','getById');
-    Route::patch('/incometypes/{id}','update');
-    Route::delete('/incometypes/{id}','destroy');
+Route::controller(\App\Http\Controllers\IncomeTypesController::class)->group(function () {
+    Route::get('/incometypes', 'index');
+    Route::post('/incometypes', 'store');
+    Route::get('incometypes/{id}', 'getById');
+    Route::patch('/incometypes/{id}', 'update');
+    Route::delete('/incometypes/{id}', 'destroy');
 });
 
-//TODO : Create Expense Routes
+//TODO : Create Expenses Routes
+//TODO : CRUD Expense Types
+
