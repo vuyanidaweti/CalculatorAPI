@@ -5,15 +5,15 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class IncomeType extends Model
+class ExpenseType extends Model
 {
     protected $fillable = [
-        'frequency',
-        'description'
+        'name',
+        'description',
     ];
 
-    public function incometypes()
+    public function expenses()
     {
-        return $this->hasMany(Income::class, 'income_type_id');
+        return $this->belongsTo(ExpenseType::class, 'expense_type_id');
     }
 }
